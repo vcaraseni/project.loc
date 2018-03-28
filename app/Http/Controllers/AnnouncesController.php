@@ -40,8 +40,6 @@ class AnnouncesController extends Controller
      */
     public function createAnnounce(Request $request)
     {
-        $announce = new Announce();
-
         // todo create variables for status
 
         $validatedData = $request->validate([
@@ -49,9 +47,9 @@ class AnnouncesController extends Controller
             'body' => 'required',
         ]);
 
-        $announce->title = $request->title;
-        $announce->body = $request->body;
-        $announce->save();
+        $this->announce->title = $request->title;
+        $this->announce->body = $request->body;
+        $this->announce->save();
 
         return view('pages.create');
 
@@ -63,8 +61,7 @@ class AnnouncesController extends Controller
      */
     public function getAnnounceById($id)
     {
-        $announce = new Announce();
-        $data = $announce->getById($id);
+        $data = $this->announce->getById($id);
         return view('pages.announce', ['data' => $data]);
     }
 
