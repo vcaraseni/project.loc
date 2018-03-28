@@ -1,0 +1,11 @@
+body{
+    background-color: #edeef0;
+}
+.announce{
+    margin: 20px 0px;
+}
+.announce:hover{
+    box-shadow: 0 0 1px 0;
+    /*box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.1);*/
+    /*box-shadow: 0 3px 5px rgba(0,0,0,0.1);*/
+}
